@@ -19,4 +19,5 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
 # Bash script to check traffic
 COPY SIG /srv/shiny-server/sample-apps/SIG/
 COPY shiny-server.sh /usr/bin/shiny-server.sh
+RUN chmod 777 /usr/bin/shiny-server.sh
 CMD ["/usr/bin/shiny-server.sh"]
